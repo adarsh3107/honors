@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container-fluid p-0" style="height: 100vh;display: grid;place-items: center;background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);">
+        <div class="card d-flex" style="padding: 25px;box-shadow: 5px 5px 5px gray;">
+            <div class="card-header" style="background-color: white;">
+                <h1>Image to Text Converter</h1>
+            </div>
+            <div class="card-body">
+                <form action = "http://localhost:5000/get_video" method = "POST"
+                enctype = "multipart/form-data">
+                <input class="btn btn-dark" style="display: inline-block;height: 50px; width: min-content;" type = "file" name = "file" />
+                <!-- <label for="submit_btn">Upload Image</label> -->
+                <input class="btn btn-info" style="display: inline-block;height: 50px;" name="submit_btn" value="Upload" type = "submit"/>
+                <p class="ny-5">{{message}}</p>
+                </form>
+                <p>Converted Text : </p>
+                <div class="text-left p-4" style="background-color: #a7a9a9;">
+                    
+                    <p>{{result}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </form>
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+</body>
+</html>
